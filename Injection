@@ -1,0 +1,48 @@
+'' or 1=1
+'' or admin=true #' and senha243455'  //SQL Injection on Applications 
+
+//Acima temos exemplos de SQL Injection, que é uma técnica de ataque que consiste em inserir ou "injetar" uma série de comandos SQL maliciosos em uma entrada de dados, para que o atacante possa acessar recursos não autorizados de um banco de dados.
+
+//Para evitar esse tipo de ataque, é necessário que o programador faça uma validação, filtro e sanitização dos dados de entrada, para que não seja possível inserir comandos SQL maliciosos.
+ Bibliotecas podem ajudar a não fazer esta validação/sanitização na unha.
+
+Não concatene strings para formar uma query, use prepared statements API.
+
+
+///////////////////////////////////////////////////////////////
+
+How to Prevent
+Preventing injection requires keeping data separate from commands and queries:
+
+
+Primary Defenses:
+
+Option 1: Use of Prepared Statements (with Parameterized Queries)
+Option 2: Use of Properly Constructed Stored Procedures
+Option 3: Allow-list Input Validation
+Option 4: Escaping All User Supplied Input
+Additional Defenses:
+
+Also: Enforcing Least Privilege
+Also: Performing Allow-list Input Validation as a Secondary Defense
+
+
+
+The preferred option is to use a safe API, which avoids using the interpreter entirely, provides a parameterized interface, or migrates to Object Relational Mapping Tools (ORMs).
+Note: Even when parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data or executes hostile data with EXECUTE IMMEDIATE or exec().
+
+Use positive server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.
+
+For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter.
+Note: SQL structures such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.
+
+Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.
+
+Tools: SAST and DAST tools may help to identify SQL injection flaws and can also help to prevent them.
+    ORM hibernate / JDBC
+
+
+
+
+
+  Ref.:  https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet
