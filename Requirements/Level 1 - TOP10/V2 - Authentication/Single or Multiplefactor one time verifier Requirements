@@ -1,0 +1,12 @@
+NIST 800-63 - Padrão de autenticação moderno e baseado em evidências
+
+Senhas únicas de fator único (OTPs) são tokens físicos ou flexíveis que exibem um desafio único 
+pseudoaleatório em constante mudança. Esses dispositivos tornam o phishing (personificação) difícil, mas não 
+impossível. Esse tipo de autenticador é considerado "algo que você tem". Os tokens multifatores são 
+semelhantes aos OTPs de fator único, mas exigem a inserção de um código PIN válido, desbloqueio biométrico, 
+inserção USB ou emparelhamento NFC, ou algum valor adicional (como calculadoras de assinatura de 
+transação) para criar o OTP final.
+
+2.8.1 Verifique se os OTPs baseados em tempo têm um tempo de vida 
+definido antes de expirar.
+
