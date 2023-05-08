@@ -1,0 +1,17 @@
+V3 Gestão de sessão
+
+Objetivo de controle
+
+Um dos principais componentes de qualquer aplicação baseada na Web ou API com estado é o mecanismo 
+pelo qual ele controla e mantém o estado de um usuário ou dispositivo que interage com ele. A gestão de 
+sessão altera um protocolo sem estado para com estado, o que é crítico para diferenciar diferentes usuários 
+ou dispositivos.
+Certifique-se de que uma aplicação verificado atenda aos seguintes requisitos de gestão de sessão de alto 
+nível:
+• As sessões são únicas para cada indivíduo e não podem ser adivinhadas ou compartilhadas.
+• As sessões são invalidadas quando não são mais necessárias e expiram durante períodos de 
+inatividade.
+Conforme observado anteriormente, esses requisitos foram adaptados para serem um subconjunto 
+compatível de controles NIST 800-63b selecionados, focados em ameaças comuns e vulnerabilidades de 
+autenticação comumente exploradas. Os requisitos de verificação anteriores foram retirados, desduplicados 
+ou, geralmente, adaptados para serem fortemente alinhados com a intenção dos NIST 800-63b requisitos.

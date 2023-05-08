@@ -1,0 +1,38 @@
+NIST 800-63 - Padrão de autenticação moderno e baseado em evidências
+
+No passado, um verificador comum fora de banda seria um e-mail ou SMS contendo um link de redefinição de 
+senha. Os invasores usam esse mecanismo fraco para redefinir contas que ainda não controlam, como assumir 
+o controle da conta de e-mail de uma pessoa e reutilizar qualquer link de redefinição descoberto. Existem 
+maneiras melhores de lidar com a verificação fora da banda.
+Autenticadores seguros fora da banda são dispositivos físicos que podem se comunicar com o verificador por 
+um canal secundário seguro. Os exemplos incluem notificações push para dispositivos móveis. Esse tipo de 
+OWASP Application Security Verification Standard 4.0.3 (pt) 29
+autenticador é considerado "algo que você tem". Quando um usuário deseja autenticar, a aplicação de 
+verificação envia uma mensagem para o autenticador fora de banda por meio de uma conexão com o 
+autenticador direta ou indiretamente por um serviço terceirizado. A mensagem contém um código de 
+autenticação (normalmente um número aleatório de seis dígitos ou uma caixa de diálogo de aprovação 
+modal). A aplicação verificador espera receber o código de autenticação por meio do canal primário e compara 
+o hash do valor recebido com o hash do código de autenticação original. Se forem iguais, o verificador fora da 
+banda pode presumir que o usuário foi autenticado.
+O ASVS assume que apenas alguns desenvolvedores desenvolverão novos autenticadores fora de banda, como 
+notificações push e, assim, os seguintes controles ASVS se aplicam a verificadores, como API de autenticação, 
+aplicações e implementações de logon único. Se estiver desenvolvendo um novo autenticador fora de banda, 
+consulte NIST 800-63B § 5.1.3.1.
+Autenticadores inseguros fora de banda, como e-mail e VOIP, não são permitidos. A autenticação PSTN e SMS 
+são atualmente "restritas" pelo NIST e devem ser substituídas em favor de notificações por push ou similares. 
+Se você precisar usar autenticação fora de banda por telefone ou SMS, consulte o § 5.1.3.3.
+
+2.7.1 Verifique se os autenticadores de texto não criptografado fora da 
+banda (NIST "restrito"), como SMS ou PSTN, não são oferecidos por 
+padrão e alternativas mais fortes, como notificações por push, são 
+oferecidas primeiro.
+
+2.7.2 Verifique se o verificador fora de banda expira solicitações, códigos 
+ou tokens de autenticação fora de banda após 10 minutos.
+
+2.7.3 Verifique se as solicitações, códigos ou tokens de autenticação do 
+verificador fora de banda podem ser usados apenas uma vez e 
+apenas para a solicitação de autenticação original.
+
+2.7.4 Verifique se o autenticador e o verificador fora da banda se 
+comunicam por um canal independente seguro.

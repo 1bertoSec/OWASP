@@ -1,0 +1,12 @@
+V3.2 Ligação de Sessão
+
+3.2.1 Verifique se a aplicação gera um novo token de sessão na 
+autenticação do usuário.
+
+3.2.2 Verifique se os tokens de sessão possuem pelo menos 64 bits de 
+entropia
+
+3.2.3 Verifique se a aplicação armazena apenas tokens de sessão no 
+navegador usando métodos seguros, como cookies devidamente 
+protegidos (consulte a seção 3.4) ou armazenamento de sessão HTML 
+5.

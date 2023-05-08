@@ -1,0 +1,37 @@
+NIST 800-63 - Padrão de autenticação moderno e baseado em evidências
+
+A agilidade do autenticador é essencial para aplicações preparados para o futuro. Refatore os verificadores de 
+aplicações para permitir autenticadores adicionais conforme as preferências do usuário, bem como permitir a 
+retirada de autenticadores obsoletos ou inseguros de maneira ordenada
+
+2.2.1 Verifique se os controles antiautomação são eficazes na 
+mitigação de testes de credenciais violadas, força bruta e ataques 
+de bloqueio de conta. Esses controles incluem o bloqueio das 
+senhas violadas mais comuns, bloqueios suaves, limitação de 
+taxa, CAPTCHA, atrasos cada vez maiores entre tentativas, 
+restrições de endereço IP ou restrições baseadas em risco, como 
+localização, primeiro login num dispositivo, tentativas recentes 
+de desbloquear a conta, ou similar. Verifique se não é possível 
+mais de 100 tentativas com falha por hora numa única conta.
+
+2.2.2 Verifique se o uso de autenticadores fracos (como SMS e e-mail) 
+é limitado a verificação secundária e aprovação de transações e 
+não como substituto para métodos de autenticação mais 
+seguros. Verifique se métodos mais fortes são oferecidos antes 
+de métodos fracos, se os usuários estão cientes dos riscos ou se 
+as medidas adequadas estão em vigor para limitar os riscos de 
+comprometimento da conta
+
+2.2.3 Verifique se as notificações seguras são enviadas aos usuários 
+após atualizações nos detalhes de autenticação, como 
+redefinições de credenciais, alterações de e-mail ou endereço, 
+login de locais desconhecidos ou arriscados. O uso de 
+notificações push - em vez de SMS ou e-mail - é preferível, mas 
+na ausência de notificações push, SMS ou e-mail é aceitável, 
+desde que nenhuma informação confidencial seja divulgada na 
+notificação.
+
+2.2.4 Verifique a resistência à representação contra phishing, como o
+uso de autenticação multifator, dispositivos criptográficos com 
+intenção (como chaves conectadas com um push para autenticar) 
+ou em níveis AAL mais altos, certificados do lado do cliente.

@@ -1,0 +1,4 @@
+Autorização é o conceito de permitir acesso a recursos apenas para aqueles autorizados a usá-los. Certifiquese de que uma aplicação verificado atenda aos seguintes requisitos de alto nível:
+• As pessoas que acessam recursos possuem credenciais válidas para fazê-lo.
+• Os usuários estão associados a um conjunto bem definido de funções e privilégios.
+• Os metadados de função e permissão são protegidos contra repetição ou adulteração.

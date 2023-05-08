@@ -1,0 +1,17 @@
+NIST 800-63 - Padrão de autenticação moderno e baseado em evidências
+
+Autenticadores são senhas, soft tokens, tokens de hardware e dispositivos biométricos. O ciclo de vida dos 
+autenticadores é crítico para a segurança de uma aplicação - se qualquer pessoa pode registrar uma conta sem 
+evidência de identidade, pode haver pouca confiança na declaração de identidade. Para sites de mídia social 
+como o Reddit, tudo bem. Para sistemas bancários, um maior foco no registro e emissão de credenciais e 
+dispositivos é fundamental para a segurança da aplicação.
+Observação: as senhas não devem ter um tempo de vida máximo ou estar sujeitas à rotação de senha. As 
+senhas devem ser verificadas quanto a violação, não substituídas regularmente.
+
+
+2.3.1 Verifique se as senhas iniciais ou os códigos de ativação gerados 
+pelo sistema DEVEM ser gerados aleatoriamente de forma segura, 
+DEVEM ter pelo menos 6 caracteres e PODEM conter letras e 
+números e expiram após um curto período de tempo. Esses 
+segredos iniciais não devem ser permitidos para se tornar a senha 
+de longo prazo

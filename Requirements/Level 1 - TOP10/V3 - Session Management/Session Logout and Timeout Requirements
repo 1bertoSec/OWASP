@@ -1,0 +1,20 @@
+V3.3 Encerramento da Sessão
+
+Os session timeouts foram alinhados com o NIST 800-63, que permite session timeouts muito mais longos do 
+que os tradicionalmente permitidos pelos padrões de segurança. As organizações devem revisar a tabela 
+abaixo e, se um tempo limite mais longo for desejável com base no risco da aplicação, o valor NIST deve ser o 
+limite superior dos tempos limite de inatividade da sessão L1 neste contexto é IAL1/AAL1, L2 é IAL2/AAL3, L3 é IAL3/AAL3. Para IAL2/AAL2 e IAL3/AAL3, o tempo limite 
+de inatividade mais curto é o limite inferior de tempos de inatividade para ser desconectado ou autenticado 
+novamente para retomar a sessão
+
+3.3.1 Verifique se o logoff e a expiração invalidam 
+o token de sessão, de modo que o botão 
+Voltar ou uma parte confiável downstream 
+não retome uma sessão autenticada, 
+inclusive entre partes confiáveis
+
+3.3.2 Se os autenticadores permitirem que os 
+usuários permaneçam conectados, verifique 
+se a reautenticação ocorre periodicamente 
+quando usados ativamente ou após um 
+período ocioso.

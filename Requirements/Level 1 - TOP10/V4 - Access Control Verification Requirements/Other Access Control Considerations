@@ -1,0 +1,9 @@
+V4.3 Outras considerações de controle de acesso
+
+4.3.1 Verifique se as interfaces administrativas usam autenticação multifator 
+apropriada para impedir o uso não autorizado
+
+4.3.2 Verifique se a navegação no diretório está desativada, a menos que seja 
+deliberadamente desejada. Além disso, as aplicações não devem permitir a 
+descoberta ou divulgação de metadados de arquivo ou diretório, como pastas 
+Thumbs.db, .DS_Store, .git ou .svn

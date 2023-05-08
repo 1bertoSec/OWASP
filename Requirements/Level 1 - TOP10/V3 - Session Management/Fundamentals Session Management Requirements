@@ -1,0 +1,6 @@
+V3.1 Fundamentos de Segurança de Gestão de Sessão
+
+3.1.1 Verifique se a aplicação nunca revela tokens de sessão em 
+parâmetros de URL.
+
+

@@ -1,0 +1,10 @@
+V4.2 Controle de acesso de nível de operação
+
+4.2.1 Verifique se os dados confidenciais e as APIs estão protegidos contra ataques 
+Insecure Direct Object Reference (IDOR) direcionados à criação, leitura, 
+atualização e exclusão de registros, como criar ou atualizar o registro de outra 
+pessoa, visualizar os registros de todos ou excluir todos os registros.
+
+
+4.2.2 Verifique se a aplicação ou estrutura impõe um forte mecanismo anti-CSRF 
+para proteger a funcionalidade autenticada e se a antiautomação ou antiCSRF eficaz protege a funcionalidade não autenticada.
