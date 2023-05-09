@@ -1,0 +1,31 @@
+V5.2 Sanitização e Sandbox
+
+5.2.1 Verifique se todos os inputs de HTML não confiáveis de editores WYSIWYG ou 
+similares foram devidamente sanitizadas com uma biblioteca, ou recurso de 
+estrutura do higienizador de HTML
+
+5.2.2 Verifique se os dados não estruturados são limpos para impor medidas de 
+segurança, como caracteres e comprimento permitidos.
+
+5.2.3 Verifique se a aplicação limpa a input do usuário antes de passar para os 
+sistemas de e-mail para proteger contra injeção de SMTP ou IMAP
+
+5.2.4 Verifique se a aplicação evita o uso de eval() ou outros recursos dinâmicos de 
+execução de código. Onde não houver alternativa, qualquer input do usuário 
+incluída deve ser limpa ou protegida antes de ser executada
+
+5.2.5 Verifique se a aplicação protege contra-ataques de injeção de modelo, 
+garantindo que qualquer input do usuário incluída seja limpa ou protegida.
+
+5.2.5 Verifique se a aplicação protege contra-ataques de injeção de modelo, 
+garantindo que qualquer input do usuário incluída seja limpa ou protegida.
+
+5.2.7 Verifique se a aplicação sanitiza, desativa ou coloca em área restrita o 
+conteúdo de scripts Scalable Vector Graphics (SVG) fornecido pelo usuário, 
+especialmente no que se refere a XSS resultante de scripts embutidos e ao 
+ForeignObject.
+
+5.2.8 Verifique se a aplicação sanitiza, desativa ou coloca em sandbox o conteúdo 
+de linguagem de modelo de expressão ou script fornecido pelo usuário, como 
+folhas de estilo Markdown, CSS ou XSL, BBCode ou similares.
+

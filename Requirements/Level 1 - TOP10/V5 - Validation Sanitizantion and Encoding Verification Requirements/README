@@ -1,0 +1,16 @@
+A falha de segurança da aplicação da Web mais comum é a falha em validar adequadamente a input 
+proveniente do cliente ou do ambiente antes de usá-la diretamente sem qualquer codificação de output. Essa 
+fraqueza leva a quase todas as vulnerabilidades significativas em aplicaçãos da Web, como Cross-Site Scripting 
+(XSS), injeção de SQL, interpreter injection, ataques de localidade/Unicode, ataques de sistema de arquivos e 
+buffer overflows.
+Certifique-se de que uma aplicação verificado atenda aos seguintes requisitos de alto nível:
+• Validação de input e arquitetura de codificação de output têm um pipeline acordado para evitar 
+ataques de injeção.
+• Os dados de input são fortemente digitados, validados, com intervalo ou comprimento verificados, 
+ou, na pior das hipóteses, higienizados ou filtrados.
+• Os dados de output são codificados ou escapados conforme o contexto dos dados o mais próximo 
+possível do interpretador.
+Com a arquitetura moderna de aplicações da Web, a codificação de output é mais importante do que nunca. É 
+difícil fornecer validação de input robusta em determinados cenários, portanto, o uso de API mais segura, 
+como consultas parametrizadas, estruturas de modelo de escape automático ou codificação de output 
+cuidadosamente escolhida, é fundamental para a segurança da aplicação.

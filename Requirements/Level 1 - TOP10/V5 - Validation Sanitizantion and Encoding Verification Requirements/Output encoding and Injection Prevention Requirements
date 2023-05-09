@@ -1,0 +1,62 @@
+V5.3 Codificação de Output e Prevenção de Injeção
+
+A codificação de output próxima ou adjacente ao interpretador em uso é crítica para a segurança de qualquer 
+aplicação. Normalmente, a codificação de output não é mantida, mas usada para tornar a output segura no 
+contexto de output apropriado para uso imediato. Deixar de codificar a output resultará numa aplicação 
+injetável e insegura.
+
+
+5.3.1 Verifique se a codificação de output é relevante para o interpretador e o 
+contexto necessários. Por exemplo, use codificadores especificamente para 
+valores HTML, atributos HTML, JavaScript, parâmetros de URL, cabeçalhos 
+HTTP, SMTP e outros conforme o contexto exigir, especialmente de inputs 
+não confiáveis por exemplo, nomes com Unicode ou apóstrofes, como ねこ
+ou O'Hara
+
+5.3.2 Verifique se a codificação de output preserva o conjunto de caracteres e 
+localidade escolhidos pelo usuário, de forma que qualquer ponto de 
+caractere Unicode seja válido e manipulado com segurança.
+
+5.3.3 Verifique se o escape de output sensível ao contexto, de preferência 
+automatizado - ou, na pior das hipóteses, manual - protege contra XSS 
+refletido, armazenado e baseado em DOM.
+
+
+5.3.4 Verifique se a seleção de dados ou consultas de banco de dados (por 
+exemplo, SQL, HQL, ORM, NoSQL) usam consultas parametrizadas, ORMs, 
+estruturas de entidade ou estão protegidas contra ataques de injeção de 
+banco de dados
+
+5.3.5 Verifique se onde mecanismos parametrizados ou mais seguros não estão 
+presentes, a codificação de output específica do contexto é usada para 
+proteger contra ataques de injeção, como o uso de escape SQL para proteger 
+contra injeção SQL
+
+5.3.6 Verifique se a aplicação protege contra ataques de injeção JSON, ataques de 
+avaliação JSON e avaliação de expressão JavaScript
+
+5.3.7 Verifique se a aplicação protege contra vulnerabilidades de injeção de LDAP 
+ou se foram implementados controles de segurança específicos para impedir 
+a injeção de LDAP.
+
+5.3.8 Verifique se a aplicação protege contra injeção de comando do SO e se as 
+chamadas do sistema operacional usam consultas de SO parametrizadas ou 
+usam codificação de output de linha de comando contextual
+
+5.3.9 Verifique se a aplicação protege contra ataques de inclusão de arquivo local 
+(LFI) ou inclusão de arquivo remoto (RFI).
+
+
+5.3.10 Verifique se a aplicação protege contra ataques de injeção XPath ou injeção 
+XML.
+
+
+Observação: usar consultas parametrizadas ou escapar do SQL nem sempre é suficiente; nomes de tabelas e 
+colunas, ORDER BY e assim por diante, não podem ser ignorados. A inclusão de dados fornecidos pelo usuário 
+com escape nesses campos resulta em consultas com falha ou injeção de SQL.
+Observação: o formato SVG permite explicitamente o script ECMA em quase todos os contextos, portanto, 
+pode não ser possível bloquear completamente todos os vetores SVG XSS. Se o upload de SVG for necessário, 
+é altamente recomendável servir esses arquivos carregados como texto/sem formatação ou usar um domínio 
+de conteúdo fornecido pelo usuário separado para evitar que o XSS bem-sucedido assuma o controle da 
+aplicação.
+

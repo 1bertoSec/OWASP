@@ -1,0 +1,20 @@
+V5.5 Prevenção de desserialização
+
+
+5.5.1 Verifique se os objetos serializados usam verificações de integridade ou são 
+criptografados para impedir a criação de objetos hostis ou adulteração de 
+dados
+
+5.5.2 Verifique se a aplicação restringe corretamente os analisadores de XML para 
+usar apenas a configuração mais restritiva possível e para garantir que 
+recursos não seguros, como a resolução de entidades externas, sejam 
+desabilitados para evitar ataques de XML eXternal Entity (XXE).
+
+
+5.5.3 Verifique se a desserialização de dados não confiáveis é evitada ou protegida 
+em código personalizado e bibliotecas de terceiros (como analisadores JSON, 
+XML e YAML).
+
+5.5.4 Verifique se, ao analisar JSON em navegadores ou back-ends baseados em 
+JavaScript, JSON.parse é usado para analisar o documento JSON. Não use 
+eval() para analisar JSON.
