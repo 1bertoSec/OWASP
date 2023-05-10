@@ -1,0 +1,5 @@
+V7.4 Tratamento de Erros
+
+7.4.1 Verifique se uma mensagem genérica é exibida quando ocorre um erro 
+inesperado ou sensível à segurança, possivelmente com uma ID exclusiva que 
+a equipe de suporte pode usar para investigar.

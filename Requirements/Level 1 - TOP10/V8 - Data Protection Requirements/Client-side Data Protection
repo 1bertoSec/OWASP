@@ -1,0 +1,12 @@
+V8.2 Proteção de dados do lado do cliente
+
+8.2.1 Verifique se a aplicação define cabeçalhos anti-cache suficientes para que 
+dados confidenciais não sejam armazenados em cache em navegadores 
+modernos.
+
+8.2.2 Verifique se os dados armazenados no armazenamento do navegador (como 
+localStorage, sessionStorage, IndexedDB ou cookies) não contêm dados 
+confidenciais.
+
+8.2.3 Verifique se os dados autenticados foram apagados do armazenamento do 
+cliente, como o DOM do navegador, após o término do cliente ou da sessão.
