@@ -1,0 +1,56 @@
+Modelagem de ameaças
+
+Informações
+
+  Nome da aplicação: Avaliação de Produtos
+  Versão da aplicação 1.0
+  Descrição: O consumidor que comprou um produto pode fazer uma avaliação dele na loja, colocando uma nota, uma descrição e uma foto
+  Autor: Ben-hur (email@xcorp.com.br)
+  Participantes
+  Revisor
+
+
+
+ Dependências externas
+    O usuário acessa a plataforma por onde? Site, aplicativo? : Site apenas
+    Este site é acessado por qualquer navegador?: Sim
+
+   Quando o usuário termina de preencher o formulário e envia a avaliação, ela vai pra onde? Tem uma api que recebe isso? : Sim, tem uma api que recebe isso
+
+  Quais são as tecnologias da API? : É uma api Python feita com Flask rodando em um servidor Ubuntu 20.04
+
+  Existe algum firewall, loadbalancer, api gateway, ou outra tecnologia antes de chegar na api? : Não, inicialmente vamos disponibilizar a api direto no servidor como o projeto ainda é pequeno, nao estamos nos preocupando com isto no momento
+
+  Os dados da avaliação são armazenados onde? : Em um banco de dados Postgres
+  Este banco roda no mesmo servidor? : Não, em um servidor separado. Um ubuntu 18:04 com 2 cores , 8gb de ram e 1tb de disco
+
+
+1. Browser do usuário > 2. API Python / Flask > 3. Banco de dados Postgres / 4. AWS S3 imagens
+
+ID / DESCRIÇÃO
+1 / O usuário acessa o site por um browser
+2 / A api ficará em um servidor hospedado na aws. Este servidor é uma vm ubuntu 20.04, com 2 cores, 8gb de ram e 200gb de disco
+3 / Banco de dados Postgres rodando em um servidor ubuntu 18.04 com 2 cores, 8gb de ram e 1tb de disco
+4 / As imagens ficarão armazenadas no S3 da aws
+
+
+
+
+
+
+
+
+Browser do usuario > WAF > Load Balancer > API gateway > Api Python / Flask 
+
+
+  Softwares modelagem de ameaças
+    cairis
+    iriusrisk
+    threat dragon
+
+
+
+
+
+
+
